@@ -1,0 +1,38 @@
+<div class="container">
+
+<div class="row" ng-if="userDetails">
+<div class="col-md-3 profileContainer">
+<img ng-src="{{userDetails.avatar_url}}"/>
+<div class="loginName">{{userDetails.name}}</div>
+<div class="loginID">{{userDetails.login}}</div>
+<div class="summary">
+software engineer/nerd/teacher/will try anything once; surgeon with git rebase.
+<strong>@airnb @tc39</strong>. ex <strong>@twitter @MobBase @tripit</strong>. Fav 
+punctuation ?.scent petrichor.
+
+</div>
+<a href="" class="btn btn-primary btn-block">Follow</a>
+<a href="" class="blocktxt">Block or Report User
+</a>
+</div>
+<div class="col-md-9 repositoryContainer">
+   <div class="heading">Repositories</div>
+
+   <div class="list pull-left" ng-repeat="r in repos">
+<div>
+
+<div class="fullname">{{r.full_name}}</div>
+
+<div class="description">{{r.description}}</div>
+<div class="clearfix status">
+  <div class="pull-left"> <img src="images/fork.png"/> {{r.forks_count|thousandSuffix}}</div>
+  <div class="pull-left"> <img src="images/star.png"/> {{r.stargazers_count |thousandSuffix}}</div><div class="pull-left">  {{r.updated_at |date}}</div>
+</div>
+   </div>
+   </div>
+
+
+</div>
+</div>
+
+</div>

@@ -1,0 +1,73 @@
+<div class="container">
+
+<div class="row">
+
+    <div class="col-md-12" >
+
+  
+
+      <div class="clearfix filterContainer">
+<div class="filters pull-left">
+
+    <div class="form-group">
+  <input type="text" class="form-control"  ng-model="searchKeyword" data-ng-keyup="updateSearchList(searchKeyword)" placeholder="Search Repository"/>
+</div>
+
+
+<label class="custom-select">
+<select >
+<option ng-repeat="filter in filters" ng-click="updateList(filter)" ng-value="filter.name" >{{filter.name}}</option>
+</select>
+</label>
+
+
+</div>
+
+     <div class="pagination pull-left">
+
+<paging
+  page="currentPage" 
+  page-size="pageSize" 
+  total="total"
+  show-prev-next="true"
+  show-first-last="true"
+  paging-action="getRepoByIndex(page)">
+</paging>  
+
+        </div>
+
+         <div class="tags">
+      
+            <a href="#!repo/{{t}}" ng-class="{'active' : (technology == t)}" ng-repeat="t in technologies">{{t}}</a>
+
+        </div>
+     
+      </div>
+
+<div class=" repositoryContainer repo clearfix">
+  
+
+   <a class="list pull-left" ng-href="#!/user/{{r.owner.login}}" ng-repeat="r in results">
+<div>
+
+<div class="fullname">{{r.full_name}}</div>
+
+<div class="description">{{r.description}}</div>
+<div class="clearfix status">
+  <div class="pull-left"> <img src="images/fork.png"/> {{r.forks_count|thousandSuffix}}</div>
+  <div class="pull-left"> <img src="images/star.png"/> {{r.stargazers_count |thousandSuffix}}</div>
+    <div class="pull-left">  {{r.updated_at |date}}</div>
+</div>
+   </div>
+   </a>
+
+
+</div>
+
+   <a href="#!user/{{r.owner.login}}" >{{r.full_name}}</a>
+    </div>
+
+</div>
+
+
+</div>
