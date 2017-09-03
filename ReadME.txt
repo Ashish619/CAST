@@ -14,6 +14,7 @@ Refer usecasescreenshot images for uses
 -----------------------------------------------------------------------------------------------------------------------
 
 Note:
+Build using Angular JS as frontend framework
 Requires Internet connection for having web services data from service apis.
 Please Use Hi-Speed Internet Connection for better experience.
 
