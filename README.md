@@ -21,3 +21,5 @@ Requires Internet connection for having web services data from service apis.
 Please Use Hi-Speed Internet Connection for better experience.
 
 -----------------------------------------------------------------------------------------------------------------------
+
+https://safarijv.auth0.com/authorize?client_id=UtNi1m1IRXgzYFIwZrhSxell9EDRaL2v&response_type=code&connection=Paypal-Prod&redirect_uri=https://www.safaribooksonline.com/complete/auth0-oauth2/&state=https://www.safaribooksonline.com/home
